@@ -1,0 +1,68 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Projection CDS View for ZCDS_TRAVELCOMPOSITION'
+@UI.headerInfo.typeNamePlural: 'Projection CDS View for ZCDS_TRAVELCOMPOSITION'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'TravelId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'TravelId'
+annotate view ZC_CDS_TRAVELCOMPOSITION with
+{
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'TravelId'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'TravelId'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  TravelId;
+
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'CustomerId'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'CustomerId'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  CustomerId;
+
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Customer Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Customer Name'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  CustomerName;
+
+  @UI.identification: [ {
+   position: 40 ,
+   label: 'Country'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Country'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  Country;
+}

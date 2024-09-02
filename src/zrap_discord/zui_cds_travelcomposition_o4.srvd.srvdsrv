@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CDS_TRAVELCOMPOSITION'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CDS_TRAVELCOMPOSITION'
+  }
+}
+define service ZUI_CDS_TRAVELCOMPOSITION_O4 provider contracts odata_v4_ui {
+  expose ZC_CDS_TRAVELCOMPOSITION;
+}

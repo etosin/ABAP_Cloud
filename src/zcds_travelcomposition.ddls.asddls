@@ -15,5 +15,6 @@ define view entity ZCDS_TravelComposition
   key Travel.travel_id   as TravelId,
   key Travel.customer_id as CustomerId,
       Travel.description,
-      _Bookings
+      _Bookings,
+      _Customer
 }

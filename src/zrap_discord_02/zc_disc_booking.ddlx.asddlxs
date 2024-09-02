@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Booking',
+                typeNamePlural: 'Bookings',
+                title: { type: #STANDARD, value: 'BookingId' } } }
+annotate entity ZC_DISC_BOOKING with
+{
+  @UI.facet: [ { id:          'Booking',
+               purpose:       #STANDARD,
+               type:          #IDENTIFICATION_REFERENCE,
+               label:         'Booking',
+               position:      10 }  ]
+
+  @UI: { identification: [ { position: 10, label: 'Booking UUID'  } ] }
+  BookingUUID;
+
+  @UI.hidden: true
+  TravelUUID;
+
+  @UI: { lineItem:       [ { position: 20 } ],
+       identification: [ { position: 20 } ] }
+  BookingId;
+
+  @UI: { lineItem:       [ { position: 30 } ],
+       identification: [ { position: 30 } ] }
+  CarrierId;
+
+  @UI: { lineItem:       [ { position: 40 } ],
+       identification: [ { position: 40 } ] }
+  CarrierName;
+
+  @UI: { lineItem:       [ { position: 50 } ],
+       identification: [ { position: 50 } ] }
+  FlightDate;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

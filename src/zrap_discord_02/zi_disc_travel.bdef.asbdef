@@ -1,0 +1,82 @@
+managed implementation in class zbp_i_disc_travel unique;
+//strict ( 2 );
+with draft;
+
+define behavior for ZI_DISC_TRAVEL alias Travel
+persistent table zrap_disc_travel
+draft table zdraft_disc_trv
+lock master total etag LastChangedAt
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+  association _Booking { create; with draft; }
+
+  field ( numbering : managed, readonly ) travel_uuid;
+  field ( readonly ) TravelID;
+  field ( readonly ) LastChangedAt, LastChangedBy, CreatedAt, CreatedBy, LocalLastChangedAt;
+  field ( mandatory ) CustomerID;
+
+  action ( features : instance ) acceptTravel result [1] $self;
+  action ( features : instance ) rejectTravel result [1] $self;
+
+  determination setInitialStatus on modify { create; }
+  determination calculateTravelID on save { create; }
+
+  validation validateCustomer on save { field CustomerID; create; }
+
+  draft determine action Prepare
+  {
+
+    validation validateCustomer;
+
+  }
+
+  mapping for zrap_disc_travel
+    {
+      Travel_UUID        = travel_uuid;
+      TravelID           = travel_id;
+      CustomerID         = customer_id;
+      Description        = description;
+      TotalPrice         = total_price;
+      CurrencyCode       = currency_code;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+
+}
+
+define behavior for ZI_DISC_BOOK alias Booking
+persistent table zrap_disc_book
+draft table zdraft_disc_book
+lock dependent by _Travel
+authorization dependent by _Travel
+etag master LocalLastChangedAt
+{
+  update;
+  delete;
+  association _Travel { with draft; }
+
+  field ( numbering : managed, readonly ) BookingUUID;
+  field ( readonly ) TravelUUID, BookingID;
+  field ( readonly ) CreatedBy, LastChangedBy, LocalLastChangedAt;
+
+  determination calculateBookingID on modify { create; }
+
+  mapping for zrap_disc_book
+    {
+      BookingUUID        = booking_uuid;
+      TravelUUID         = travel_uuid;
+      BookingID          = booking_id;
+      CarrierID          = carrier_id;
+      FlightDate         = flight_date;
+      CreatedBy          = created_by;
+      LastChangedBy      = last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

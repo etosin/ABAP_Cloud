@@ -5,7 +5,7 @@
    <DDLS>
     <DDLNAME>ZCDS_TRAVELCUSTOMER</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>CDS View with Associations and Path Expressions</DDTEXT>
+    <DDTEXT>Travel Customer</DDTEXT>
     <SOURCE_TYPE>W</SOURCE_TYPE>
    </DDLS>
   </asx:values>
