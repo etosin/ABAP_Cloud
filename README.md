@@ -8,3 +8,7 @@ Desenvolvimentos ABAP on Cloud &amp; RAP
 **RAP**
 
 [src/zrap_discord_02](https://github.com/etosin/ABAP_Cloud/tree/main/src/zrap_discord_2)
+
+**SAP Code Pushdown - AMDP & CDS Table Function**
+
+https://github.com/etosin/ABAP_Cloud/tree/main/src/zrap_discord_03
