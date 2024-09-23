@@ -1,0 +1,4 @@
+@EndUserText.label: 'Custom Entity'
+define service ZUI_CUSTOM_ENTITY {
+  expose ZI_CUSTOM_ENTITY;
+}
