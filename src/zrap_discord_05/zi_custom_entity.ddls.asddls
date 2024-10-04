@@ -13,7 +13,7 @@ define custom entity ZI_CUSTOM_ENTITY
 
       @UI         : { identification: [{ position: 1, label: 'Travel ID' }] }
   key travelid    : abap.numc( 8 );
-
+ 
       @UI         : {
 
        lineItem   : [{ label: 'Customer ID', position: 20, importance: #HIGH}],
