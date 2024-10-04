@@ -20,7 +20,7 @@ define custom entity ZI_CUSTOM_ENTITY
        identification: [{ label: 'Customer ID', position: 20} ],
        selectionField: [ { position: 20  } ] }
       @EndUserText.label: 'Customer ID' 
-      customer_id : abap.numc( 6 );
+      customer_id : abap.numc( 6 ); 
 
       @UI         : {
       lineItem    : [{ label: 'Description', position: 30}],
