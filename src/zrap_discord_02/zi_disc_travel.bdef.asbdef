@@ -1,5 +1,6 @@
-managed implementation in class zbp_i_disc_travel unique;
-//strict ( 2 );
+managed with additional save implementation in class zbp_i_disc_travel unique;
+strict ( 2 );
+
 with draft;
 
 define behavior for ZI_DISC_TRAVEL alias Travel
@@ -19,6 +20,8 @@ etag master LocalLastChangedAt
   field ( readonly ) LastChangedAt, LastChangedBy, CreatedAt, CreatedBy, LocalLastChangedAt;
   field ( mandatory ) CustomerID;
 
+  event BookingCancelled parameter ZD_CancelingReason;
+
   action ( features : instance ) acceptTravel result [1] $self;
   action ( features : instance ) rejectTravel result [1] $self;
 
@@ -29,10 +32,13 @@ etag master LocalLastChangedAt
 
   draft determine action Prepare
   {
-
     validation validateCustomer;
-
   }
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
 
   mapping for zrap_disc_travel
     {
@@ -48,7 +54,6 @@ etag master LocalLastChangedAt
       LastChangedAt      = last_changed_at;
       LocalLastChangedAt = local_last_changed_at;
     }
-
 }
 
 define behavior for ZI_DISC_BOOK alias Booking

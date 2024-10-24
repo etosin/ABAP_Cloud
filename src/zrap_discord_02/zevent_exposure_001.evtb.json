@@ -1,0 +1,21 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Event Exposure",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "producerNamespace": "zevent001",
+  "producer": "P3508D58CEB5D5C1DADD18369BD6939AF",
+  "producerVersion": "0001",
+  "boName": "Flights",
+  "boOperation": "create",
+  "producerType": "zevent001.Flights.create.v*",
+  "events": [
+    {
+      "eventVersion": "0001",
+      "entityName": "ZI_DISC_TRAVEL",
+      "entityEventName": "BOOKINGCANCELLED"
+    }
+  ]
+}

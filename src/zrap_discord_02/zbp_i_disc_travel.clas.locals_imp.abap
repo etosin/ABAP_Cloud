@@ -1,3 +1,28 @@
+CLASS lsc_zi_disc_travel DEFINITION INHERITING FROM cl_abap_behavior_saver.
+
+  PROTECTED SECTION.
+
+    METHODS save_modified REDEFINITION.
+
+ENDCLASS.
+
+CLASS lsc_zi_disc_travel IMPLEMENTATION.
+
+  METHOD save_modified.
+
+    IF create-travel IS NOT INITIAL.
+
+      RAISE ENTITY EVENT zi_disc_travel~BookingCancelled
+      FROM VALUE #( FOR travel IN create-travel ( %key                 = travel-%key
+                                                  %param-ReasonCode    = 'A2'
+                                                  %param-Description   = 'No Reasons' ) ).
+
+    ENDIF.
+
+  ENDMETHOD.
+
+ENDCLASS.
+
 CLASS lhc_booking DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
   PRIVATE SECTION.
