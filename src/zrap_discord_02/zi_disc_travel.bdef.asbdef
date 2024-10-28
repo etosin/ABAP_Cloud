@@ -3,12 +3,20 @@ strict ( 2 );
 
 with draft;
 
+extensible
+{
+  with additional save;
+
+}
+
+
 define behavior for ZI_DISC_TRAVEL alias Travel
 persistent table zrap_disc_travel
 draft table zdraft_disc_trv
 lock master total etag LastChangedAt
 authorization master ( instance )
 etag master LocalLastChangedAt
+extensible
 {
   create;
   update;
@@ -40,7 +48,7 @@ etag master LocalLastChangedAt
   draft action Discard;
   draft action Resume;
 
-  mapping for zrap_disc_travel
+  mapping for zrap_disc_travel corresponding extensible
     {
       Travel_UUID        = travel_uuid;
       TravelID           = travel_id;
@@ -53,6 +61,7 @@ etag master LocalLastChangedAt
       LastChangedBy      = last_changed_by;
       LastChangedAt      = last_changed_at;
       LocalLastChangedAt = local_last_changed_at;
+      ZZBonusIdZRP       = zzbonus_idzr3;
     }
 }
 
