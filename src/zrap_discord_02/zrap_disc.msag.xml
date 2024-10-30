@@ -38,6 +38,12 @@
      <MSGNR>005</MSGNR>
      <TEXT>You are not authorized to perform this activity</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZRAP_DISC</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Only Digits are permited</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>

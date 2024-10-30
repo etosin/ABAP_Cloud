@@ -3,39 +3,38 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <BDEF>
-    <NAME>ZC_DISC_TRAVEL</NAME>
+    <NAME>ZI_DISC_TRAVEL_EXT2</NAME>
     <TYPE>BDEF/BDO</TYPE>
-    <DESCRIPTION>Customer Projection View</DESCRIPTION>
+    <DESCRIPTION>Behavior Extention</DESCRIPTION>
     <DESCRIPTION_TEXT_LIMIT>60</DESCRIPTION_TEXT_LIMIT>
     <LANGUAGE>EN</LANGUAGE>
     <LINKS>
      <item>
-      <HREF>./zc_disc_travel/source/main/versions</HREF>
+      <HREF>./zi_disc_travel_ext2/source/main/versions</HREF>
       <REL>http://www.sap.com/adt/relations/versions</REL>
       <TITLE>Historic versions</TITLE>
      </item>
      <item>
-      <HREF>./zc_disc_travel/source/main</HREF>
+      <HREF>./zi_disc_travel_ext2/source/main</HREF>
       <REL>http://www.sap.com/adt/relations/source</REL>
       <TYPE>text/plain</TYPE>
       <TITLE>Source Content</TITLE>
      </item>
      <item>
-      <HREF>./zc_disc_travel/source/main</HREF>
+      <HREF>./zi_disc_travel_ext2/source/main</HREF>
       <REL>http://www.sap.com/adt/relations/source</REL>
       <TYPE>text/html</TYPE>
       <TITLE>Source Content (HTML)</TITLE>
      </item>
      <item>
-      <HREF>./zc_disc_travel/enhancement/elements</HREF>
-      <REL>http://www.sap.com/adt/relations/enhancements</REL>
-      <TYPE>application/vnd.sap.adt.elementinfo+xml</TYPE>
-      <TITLE>Enhancements</TITLE>
+      <HREF>/sap/bc/adt/bo/behaviordefinitions/zi_disc_travel/source/main</HREF>
+      <REL>http://www.sap.com/adt/relations/navigation</REL>
+      <TITLE>base_bdef</TITLE>
      </item>
     </LINKS>
     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
-    <SOURCE_URI>./zc_disc_travel/source/main</SOURCE_URI>
+    <SOURCE_URI>./zi_disc_travel_ext2/source/main</SOURCE_URI>
     <SOURCE_TYPE>ABAP_SOURCE</SOURCE_TYPE>
     <SOURCE_FIXED_POINT_ARITHMETIC>true</SOURCE_FIXED_POINT_ARITHMETIC>
     <SOURCE_UNICODE_CHECKS_ACTIVE>true</SOURCE_UNICODE_CHECKS_ACTIVE>

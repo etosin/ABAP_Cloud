@@ -1,0 +1,5 @@
+CLASS zbp_i_disc_travel_ext2 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_disc_travel.
+ENDCLASS.
+
+CLASS zbp_i_disc_travel_ext2 IMPLEMENTATION.
+ENDCLASS.

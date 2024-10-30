@@ -251,20 +251,21 @@ CLASS lhc_Travel IMPLEMENTATION.
 
     " Raise msg for non existing and initial customerID
     LOOP AT travels INTO DATA(travel).
-      " Clear state messages that might exist
-      APPEND VALUE #(  %tky        = travel-%tky
-                       %state_area = 'VALIDATE_CUSTOMER' )
-        TO reported-travel.
 
       IF travel-CustomerID IS INITIAL OR NOT line_exists( customers_db[ customer_id = travel-CustomerID ] ).
+        " Clear state messages that might exist
+        APPEND VALUE #(  %tky        = travel-%tky
+                         %state_area = 'VALIDATE_CUSTOMER' )
+          TO reported-travel.
+
         APPEND VALUE #(  %tky = travel-%tky ) TO failed-travel.
 
         APPEND VALUE #(  %tky        = travel-%tky
                          %state_area = 'VALIDATE_CUSTOMER'
                          %msg        = NEW zcm_rap_discord(
-                                           severity   = if_abap_behv_message=>severity-error
-                                           textid     = zcm_rap_discord=>customer_unknown
-                                           customerid = travel-CustomerID )
+            severity   = if_abap_behv_message=>severity-error
+            textid    = zcm_rap_discord=>customer_unknown
+            customerid = travel-CustomerID )
                          %element-CustomerID = if_abap_behv=>mk-on )
           TO reported-travel.
       ENDIF.

@@ -1,0 +1,15 @@
+extension implementation in class zbp_i_disc_travel_ext2 unique;
+
+extend behavior for Travel
+{
+
+  validation zz_check_bonus on save { field ZZBonusIdZRP; }
+
+  extend draft determine action Prepare
+  {
+    validation zz_check_bonus;
+  }
+
+  factory action zzactionExample [1];
+
+}

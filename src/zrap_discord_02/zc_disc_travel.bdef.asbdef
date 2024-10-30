@@ -1,8 +1,11 @@
-projection;
-//strict ( 2 );
+projection implementation in class zbp_c_disc_travel unique;
+strict ( 2 );
 use draft;
 
+extensible;
+
 define behavior for ZC_DISC_TRAVEL alias Travel
+extensible
 //use etag
 {
   use create;
@@ -13,6 +16,12 @@ define behavior for ZC_DISC_TRAVEL alias Travel
 
   use action acceptTravel;
   use action rejectTravel;
+
+  use action Resume;
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Prepare;
 
 }
 

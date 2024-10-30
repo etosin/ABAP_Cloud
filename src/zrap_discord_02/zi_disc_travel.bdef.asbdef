@@ -5,6 +5,9 @@ with draft;
 
 extensible
 {
+  with determinations on modify;
+  with determinations on save;
+  with validations on save;
   with additional save;
 
 }
@@ -38,9 +41,10 @@ extensible
 
   validation validateCustomer on save { field CustomerID; create; }
 
-  draft determine action Prepare
+  draft determine action Prepare extensible
   {
     validation validateCustomer;
+
   }
 
   draft action Edit;
