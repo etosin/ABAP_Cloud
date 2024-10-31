@@ -1,4 +1,5 @@
 @EndUserText.label: 'Travel Service Definition'
+@AbapCatalog.extensibility.extensible: true
 define service ZUI_DISC_TRAVEL {
   expose ZC_DISC_TRAVEL;
   expose ZC_DISC_BOOKING;

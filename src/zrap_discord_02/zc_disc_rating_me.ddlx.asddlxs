@@ -1,0 +1,41 @@
+@Metadata.layer: #CUSTOMER
+
+@UI: {
+  headerInfo: { typeName: 'Review',
+                typeNamePlural: 'Reviews',
+                title: { type: #STANDARD, label: 'Travel', value: 'TravelUuid' } },
+  presentationVariant: [{ sortOrder: [{ by: 'TravelUuid', direction:  #DESC }], visualizations: [{ type: #AS_LINEITEM }] }] }
+annotate entity ZC_DISC_RATING with
+{
+
+  @UI.facet: [ { id:            'Review',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Review',
+                 position:        10 },
+               { id:              '',
+                 purpose:         #STANDARD,
+                 type:            #LINEITEM_REFERENCE,
+                 label:           'Review',
+                 position:        20,
+                 targetElement:   '_Travel'} ]
+
+
+  @UI:{ identification: [{ position: 1, label: 'Travel UUID' }] }
+  TravelUuid;
+
+  @UI: { lineItem:       [ { position: 10, label: 'Rating', type: #AS_DATAPOINT } ],
+          identification: [ { position: 10 } ],
+          selectionField: [ { position: 10 } ] }
+  @UI.dataPoint: { visualization: #RATING }
+  Rating;
+
+  @UI: {  lineItem:       [ { position: 20 } ],
+            identification: [ { position: 30 } ],
+            selectionField: [ { position: 40 } ] }
+  FreeTextComment;
+
+  @UI.hidden: true
+  _Travel;
+
+}

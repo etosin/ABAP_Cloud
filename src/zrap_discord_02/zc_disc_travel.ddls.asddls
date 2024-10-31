@@ -94,4 +94,5 @@ define root view entity ZC_DISC_TRAVEL
       /* Associations */
       _Booking : redirected to composition child ZC_DISC_BOOKING,
       _Customer
+    
 }

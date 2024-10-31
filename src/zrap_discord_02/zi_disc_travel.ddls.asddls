@@ -33,5 +33,5 @@ define root view entity ZI_DISC_TRAVEL
       last_changed_at       as LastChangedAt,
       local_last_changed_at as LocalLastChangedAt,
       _Booking,
-      _Customer
+      _Customer    
 }

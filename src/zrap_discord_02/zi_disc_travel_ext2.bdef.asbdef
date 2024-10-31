@@ -1,5 +1,6 @@
 extension implementation in class zbp_i_disc_travel_ext2 unique;
 
+
 extend behavior for Travel
 {
 
@@ -12,4 +13,20 @@ extend behavior for Travel
 
   factory action zzactionExample [1];
 
+  association ZZ_RatingZRP { create; with draft; }
+
+}
+
+define behavior for ZI_DISC_RATING alias ZZRating
+persistent table zrap_review
+lock dependent draft table zdraft_review
+authorization master ( global )
+
+{
+  update;
+  delete;
+
+  association _Travel { with draft; }
+
+  field ( readonly ) TravelUUID;
 }
