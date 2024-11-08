@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_inf_travel unique;
+strict ( 1 );
+
+define behavior for ZI_INF_TRAVEL alias InfTravel
+//persistent table zrap_inf_travel
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  //delete;
+  field ( numbering : managed, readonly ) TravelUuid;
+  field ( readonly ) TravelID;
+  field ( mandatory ) Description;
+
+  determination calculateTravelID on save { create; }
+
+  mapping for zrap_inf_travel corresponding
+    {
+      TravelUuid  = travel_uuid;
+      TravelId    = travel_id;
+      Description = description;
+    }
+
+}

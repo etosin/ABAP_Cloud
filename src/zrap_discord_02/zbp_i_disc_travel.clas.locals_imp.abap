@@ -8,6 +8,8 @@ ENDCLASS.
 
 CLASS lsc_zi_disc_travel IMPLEMENTATION.
 
+
+
   METHOD save_modified.
 
     IF create-travel IS NOT INITIAL.

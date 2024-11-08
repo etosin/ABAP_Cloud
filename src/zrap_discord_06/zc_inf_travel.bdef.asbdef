@@ -1,0 +1,8 @@
+projection;
+strict ( 1 );
+
+define behavior for ZC_INF_TRAVEL alias InfTravel
+{
+  use create;
+  use update;
+}

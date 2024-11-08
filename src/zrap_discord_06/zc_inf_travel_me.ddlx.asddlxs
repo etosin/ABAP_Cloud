@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Carrier',
+        typeNamePlural: 'Carrier',
+        title: {
+            type: #STANDARD, value: 'TravelId'
+        },
+        description: {
+            value: 'Description'
+        }
+    },
+    presentationVariant: [{
+        sortOrder: [{
+            by: 'TravelId',
+            direction: #ASC
+        }],
+        visualizations: [{
+            type: #AS_LINEITEM
+        }]
+    }]
+}
+annotate entity ZC_INF_TRAVEL with
+{
+
+  @UI.facet: [ { id:               'TravelId',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Travel',
+                  position:        10 } ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  TravelUuid;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  TravelId;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  Description;
+
+}

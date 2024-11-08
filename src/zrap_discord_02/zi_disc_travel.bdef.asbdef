@@ -65,7 +65,7 @@ extensible
       LastChangedBy      = last_changed_by;
       LastChangedAt      = last_changed_at;
       LocalLastChangedAt = local_last_changed_at;
-      ZZBonusIdZRP       = zzbonus_idzr3;
+
     }
 }
 
