@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZISMO_KNA1"
+"/DMO/TRAVEL"
 ],
 "ASSOCIATED":
 [],
@@ -12,7 +12,9 @@
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":
-[],
+[
+"ZSCALAR_DEMPO"
+],
 "VERSION":0,
 "ANNOREF_EVALUATION_ERROR":""
 }

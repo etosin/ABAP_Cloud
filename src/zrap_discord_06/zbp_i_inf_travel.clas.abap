@@ -1,5 +1,13 @@
-CLASS zbp_i_inf_travel DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_inf_travel.
+class ZBP_I_INF_TRAVEL definition
+  public
+  create private .
+
+public section.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zbp_i_inf_travel IMPLEMENTATION.
+
+
+CLASS ZBP_I_INF_TRAVEL IMPLEMENTATION.
 ENDCLASS.

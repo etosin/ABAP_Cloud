@@ -1,14 +1,13 @@
-CLASS zrap_disc_event_handler DEFINITION
-  PUBLIC
-  FINAL FOR EVENTS OF zi_disc_travel
-  CREATE PUBLIC .
+class ZRAP_DISC_EVENT_HANDLER definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zrap_disc_event_handler IMPLEMENTATION.
+CLASS ZRAP_DISC_EVENT_HANDLER IMPLEMENTATION.
 ENDCLASS.

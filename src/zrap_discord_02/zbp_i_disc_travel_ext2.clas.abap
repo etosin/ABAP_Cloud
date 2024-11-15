@@ -1,5 +1,13 @@
-CLASS zbp_i_disc_travel_ext2 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_disc_travel.
+class ZBP_I_DISC_TRAVEL_EXT2 definition
+  public
+  create private .
+
+public section.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zbp_i_disc_travel_ext2 IMPLEMENTATION.
+
+
+CLASS ZBP_I_DISC_TRAVEL_EXT2 IMPLEMENTATION.
 ENDCLASS.
