@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DEVC>
-    <CTEXT>ZABAP_DEVELOPMENT</CTEXT>
+    <CTEXT>Interface Scenarios</CTEXT>
    </DEVC>
   </asx:values>
  </asx:abap>
