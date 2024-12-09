@@ -1,0 +1,32 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Job Catalog Demo",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_BS_DEMO_JOB_ADT_EXE"
+  },
+  "exitClasses": {
+    "notification": "ZCL_BS_DEMO_JOB_ADT_NTF"
+  },
+  "parameters": [
+    {
+      "name": "TEXT",
+      "mandatory": true
+    },
+    {
+      "name": "COUNTRY"
+    },
+    {
+      "name": "R_TEXT"
+    },
+    {
+      "name": "R_LAND"
+    },
+    {
+      "name": "TEST"
+    }
+  ]
+}
